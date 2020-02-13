@@ -6,16 +6,17 @@
 
   <body>
     <main>
-      <a id="oauth" href="#">Login</a>
+      <a id="oauth" href="#">Login with LinkedIn</a>
     </main>
 
     <script>
       let URL = 'https://www.linkedin.com/oauth/v2/authorization';
 
       let options = {
+        response_type: 'code',
         client_id: '86s1nipqxrivjs',
-        redirect_uri: 'http://localhost:3000/oauth',
-        scope: '',
+        redirect_uri: 'http://localhost:3000/linkedin-auth',
+        scope: 'scope=r_liteprofile%20r_emailaddress%20w_member_social',
         state: 'johnsdoghasfleas',
       };
 
