@@ -1,35 +1,55 @@
-# LAB: Authentication (11)
+# LAB: OAuth
 
-## Deploy an Express server that implements Basic Authentication, with signup and signin capabilities, using a Mongo database for storage.
+Our company has decided to integrate OAuth instead of managing user names and passwords internally. In order to make the best decision, we are creating small research teams to assess the suitability of various OAuth providers.
 
-### Author: Earl Jay Caoile
+Your group will be assigned an OAuth provider to integrate with, assess, and report on.
 
-### Links and Resources
+## Before you begin
 
-- [submission PR](https://github.com/js-401n15-eoc/lab-12a/pull/1)
-- [GitHub Actions](https://github.com/js-401n15-eoc/lab-12a/actions)
+Refer to *Getting Started*  in the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for complete setup, configuration, deployment, and submission instructions.
 
-#### Documentation
+## Assignment: Group Research Project
 
-- [MongoDB docs (MongoDB CRUD Operations)](https://docs.mongodb.com/manual/crud/)
+- Sites such as Yahoo, Github, Wordpress, and LinkedIn all have OAuth mechanisms that work similarly to what was done during demo.
+- Integrate your provider into the provided auth server, using the included integration as your gude, reporting back to the team with a general feasibility report.
+- This is a group lab that will have you integrating OAuth with any provider.
+- Spend no more than 4 hours on this assignment.
+  - Reserve 3 Hours for research and coding and 1 Hour for report and presentation prep
 
-### Setup
+### Getting Started
 
-#### Configuring MongoDB
+- Create a new repository for this assignment
+- Copy the contents of the `starter-code/auth-server` folder into your new repository
+  - You will need to create a .env file to provide the server with variables for your implementation
+- When you deploy, be sure and enter those values into Heroku
 
-- create an .env file on the top level of this repo defining the following variables:
+### Requirements
 
-```
-MONGODB_URI=mongodb://localhost:27017/lab-12a
-PORT=3000
-```
+#### Server
 
-- start your database with the path of the DB along with the folder location for your DB files (`mongod --dbpath=/Users/path/to/data/db`: i.e. `"C:\Program Files\MongoDB\Server\4.2\bin\mongod.exe" --dbpath="D:\db"`)
+- create an account/app/credential on your assigned OAuth Provider
+- configure oauth credentials to support a client app on `http://localhost`
+- configure oauth credentials to support a server redirect uri to `http://localhost:3000/oauth`
+- create a backend route `GET /oauth` for handling oauth redirects
+- create a new middleware module under `/src` for your provider
 
-#### Tests
+#### Front End
 
-- Testing command: `npm test` from root directory
+- The server is configured to use the `public` folder for static files
+- Alter the provided index.html to use the correct settings/link for your assigned provider
 
-#### UML
+#### Testing
 
-![UML Image](lab-12a-UML.png "uml diagram")
+- Not Required
+
+#### Assignment Submission Instructions
+
+- Complete the REPORT.md file included in the lab folder and prepare a group presentation for the class based on your findings.
+- Have 1 person from your group submit the REPORT.md in Canvas
+
+#### Provider Documentation Reference
+
+- [GitHub](https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/)
+- [Auth0](https://auth0.com/)
+- [Wordpress](https://developer.wordpress.com/docs/oauth2/)
+- [LinkedIn](https://developer.linkedin.com/docs/signin-with-linkedin)
