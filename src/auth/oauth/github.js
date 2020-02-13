@@ -15,7 +15,7 @@ const CLIENT_SECRET = process.env.CLIENT_SECRET;
 const API_SERVER = process.env.API_SERVER;
 
 module.exports = async function authorize(req, res, next) {
-  console.log('inside github.js');
+
   try {
     let code = req.query.code;
     console.log('(1) CODE:', code);
