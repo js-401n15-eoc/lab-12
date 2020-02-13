@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # LAB: OAuth
 
 Our company has decided to integrate OAuth instead of managing user names and passwords internally. In order to make the best decision, we are creating small research teams to assess the suitability of various OAuth providers.
@@ -53,3 +54,7 @@ Refer to *Getting Started*  in the [lab submission instructions](../../../refere
 - [Auth0](https://auth0.com/)
 - [Wordpress](https://developer.wordpress.com/docs/oauth2/)
 - [LinkedIn](https://developer.linkedin.com/docs/signin-with-linkedin)
+=======
+# lab-12
+Lab 12 for CF JS 401 Nights
+>>>>>>> 0690d73dbfad0095dd606fb24a11acc33a2f81d4
