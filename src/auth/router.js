@@ -5,8 +5,8 @@ const authRouter = express.Router();
 
 const users = require('./users.js');
 const basicAuth = require('./basic-auth-middleware.js');
-const oauth = require('./oauth/github.js');
-const linkedinAuth = require('./oauth/linkedin.js');
+const oauth = require('./oauth/auth0.js');
+// const linkedinAuth = require('./oauth/linkedin.js');
 
 // echo '{"username":"john","password":"foo"}' | http post :3000/signup
 authRouter.post('/signup', async (req, res) => {
@@ -29,10 +29,10 @@ authRouter.get('/oauth', oauth, (req, res) => {
   res.status(200).send(req.token);
 });
 
-// Used as redirect by the oauth provider
-authRouter.get('/linkedin-auth', linkedinAuth, (req, res) => {
-  res.status(200).send(req.token);
-});
+// // Used as redirect by the oauth provider
+// authRouter.get('/linkedin-auth', linkedinAuth, (req, res) => {
+//   res.status(200).send(req.token);
+// });
 
 // Will not work unless you send username/password as Basic
 authRouter.get('/users', basicAuth, (req, res) => {

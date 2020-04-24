@@ -2,7 +2,7 @@
 
 ## OAuth Provider Name: Auth0
 
-### Research Conducted By: Shubham Majumdar an Earl Jay Caoile
+### Research Conducted By: Shubham Majumdar and Earl Jay Caoile
 
 ### Overall Score and Comments
 #### Score (Out of 10): 8
